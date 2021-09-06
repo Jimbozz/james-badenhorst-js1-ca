@@ -1,0 +1,51 @@
+.card {
+    margin: 1rem;
+    padding: 0.1rem 1rem;
+    background: white;
+    border: 1px solid grey;
+    border-radius: 1rem;
+}
+
+
+.result {
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 300px;
+    background: whitesmoke;
+    border: 1px solid grey;
+    border-radius: 1rem;
+    flex: none;
+}
+
+.details {
+    display: flex;
+    height: 90vh;
+}
+
+.details-image {
+    margin-bottom: 1em;
+    max-width: 100%;
+    max-height: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.pokemon-image {
+    margin-bottom: 1em;
+    max-width: 100%;
+    max-height: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pokemonInfo {
+    font-size: 30rem;
+}
+
+.cardDetails {
+    display: flex;
+    gap: 100px;
+}
