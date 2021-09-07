@@ -70,6 +70,6 @@ function validateEmail(email) {
 
 form.onsubmit = function formSuccess() {
     
-    form.innerHTML = "Well done!"
+    form.innerHTML = `<div class="success-message">Your form was successfully submitted</div>`
     
 }
