@@ -45,13 +45,13 @@ function formValidation(event) {
     else {
         addressError.style.display = "block";
     }
-   
+   console.log(firstName.value);
 }
 
 form.addEventListener("submit", formValidation);
 
 
-////////////// Functions
+////////////// Validation Functions
 
 function checkLength(value, length) {
     if(value.trim().length > length) {
@@ -66,4 +66,10 @@ function validateEmail(email) {
     const regEx = /\S+@\S+\.\S+/;
     const matches = regEx.test(email);
     return matches;
+}
+
+form.onsubmit = function formSuccess() {
+    
+    form.innerHTML = "Well done!"
+    
 }
