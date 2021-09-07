@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Contact</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="data:;base64,=" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/index.html" class="active">HOME</a>
+                    </li>
+                    <li>
+                        <a href="/contact.html">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <form id="contactForm">
+                <div>
+                    <label>
+                        First Name (required)
+                        <input name="firstName" id="firstName" placeholder="First Name">
+                    </label>
+                    <div class="formError" id="firstNameError">Please enter your first name</div>
+                </div>
+                <div>
+                    <label>
+                        Last Name (required)
+                        <input name="lastName" id="lastName" placeholder="Last Name">
+                    </label>
+                    <div class="formError" id="lastNameError">Please enter your last name</div>
+                </div>
+                <div>
+                    <label>
+                        subject (required)
+                        <input name="subject" id="subject" placeholder="Subject">
+                    </label>
+                    <div class="formError" id="subjectError">Must have a minimum length of 10 characters</div>
+                </div>
+                <div>
+                    <label>
+                        Email (required)
+                        <input name="email" id="email" placeholder="Email">
+                    </label>
+                    <div class="formError" id="emailError">Please enter a valid email address</div>
+                </div>
+                <div>
+                    <label>
+                        Address
+                        <input name="address" id="address" placeholder="Address">
+                    </label>
+                    <div class="formError" id="addressError">Must have a minimum length of 25 characters</div>
+                </div>
+                <button>Submit</button>
+            </form>
+        </main>
+        <script src="js/contact.js"></script>
+        <script src="js/components/errorMessage.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
