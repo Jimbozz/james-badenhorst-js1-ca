@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Home</title>
+        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Open+Sans&display=swap" rel="stylesheet">
@@ -13,21 +14,24 @@
     </head>
     <body>
         <header>
+            <img src="/pokemon-1536849_640.png" class="logo" alt="">
             <nav>
                 <ul>
                     <li>
-                        <a href="/index.html" class="active">HOME</a>
+                        <a class="links" href="/index.html" class="active">HOME</a>
                     </li>
                     <li>
-                        <a href="/contact.html">CONTACT</a>
+                        <a class="links" href="/contact.html">CONTACT</a>
                     </li>
                 </ul>
             </nav>
         </header>
-        <main >
+        <main>
             <div class="errorContainer"></div>
             <div class="details">
-                <div class="loader"></div>
+                <div class="loader-wrapper">
+                    <div class="loader"></div>
+                </div>
             </div>
         </main>
         <script src="js/components/errorMessage.js"></script>

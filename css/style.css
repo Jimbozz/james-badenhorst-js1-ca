@@ -1,21 +1,56 @@
 
 
+
 body {
     font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+    
 }
 
-h3 {
+/* main {
+    background-image: url(/background-4664911_640.jpg);
+    
+    background-size: 100vh;
+} */
+
+
+h3, nav {
     font-family: 'Audiowide', cursive;
 }
 
 
+/* Navigation*/
 
-.card {
-    margin: 1rem;
-    padding: 0.1rem 1rem;
-    background: white;
-    border: 1px solid grey;
-    border-radius: 1rem;
+li {
+    display: inline;
+    
+}
+
+.logo {
+    width: 50px;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.links {
+    color:  rgb(250, 227, 17);
+    border-bottom: 2px solid white;
+    margin: 20px;
+}
+
+.links:hover {
+    border-bottom: 2px solid rgb(250, 227, 17);
+    color: rgb(250, 227, 17);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgb(60, 90, 166);
 }
 
 
@@ -24,14 +59,18 @@ h3 {
     padding: 1rem;
     max-width: 300px;
     background: whitesmoke;
-    border: 1px solid grey;
     border-radius: 1rem;
     flex: none;
+    box-shadow: 3px 3px 3px rgba(192, 206, 202, 0.3);
 }
+
+
 
 .details {
     display: flex;
     height: 90vh;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .details-image {
@@ -63,14 +102,68 @@ h3 {
     gap: 100px;
 }
 
-.loader {
-    border: 16px solid green;
-    border-top: 16px solid darkred;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
+/*Loader*/
+
+*
+{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
 }
+
+.loader-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.loader {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50% ;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid white;
+    animation: frames .8s  linear 0s infinite;
+}
+
+.loader::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    background-color: red;
+    border-bottom: 4px solid;
+    top: -4px
+}
+
+.loader:before {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 10px;
+    height:10px;
+    border: 4px solid;
+    border-radius: 50%;
+    bottom: 18px;
+    right: 18px;
+    z-index: 1;
+}
+
+
+@keyframes frames {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*Error state*/
 
 .error {
     display: inline;
@@ -80,6 +173,7 @@ h3 {
     background: rgba(225, 0, 0, 0.1);
 }
 
+/*form*/
 
 form {
     padding: 2em;
@@ -118,12 +212,3 @@ label {
 }
 
 
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}

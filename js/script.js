@@ -39,9 +39,7 @@ async function callApi() {
         detailsContainer.innerHTML = "";
         errorContainer.innerHTML = displayError("Bad things have happened");
     }
-    finally {
-        
-      }
+   
 }
 
 callApi();
