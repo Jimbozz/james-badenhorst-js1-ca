@@ -26,6 +26,7 @@ async function callApi() {
             if(!final[i].weaknesses) {
                 continue;
             }
+
             
             detailsContainer.innerHTML += `<a class="result"  href="/details.html?id=${final[i].id}">
                                             <img class="details-image" src="${final[i].images.small}" alt="${final[i].name}">

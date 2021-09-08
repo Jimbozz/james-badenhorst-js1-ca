@@ -21,8 +21,11 @@ async function pokemonInfo() {
 
         for(let i = 0; i < final.weaknesses.length; i++) {
             title.innerHTML = `${final.name}`;
+
+           
             createHtml(final);
         }
+        
     } 
     
     catch(error) {
