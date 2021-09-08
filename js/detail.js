@@ -36,20 +36,23 @@ pokemonInfo();
 
 function createHtml(final) {
 
-    pokemonContainer.innerHTML = `<img class="pokemon-image" src="${final.images.small}">
-                                <div class="cardDetails">
-                                    <h2>Name: ${final.name}</h2>
-                                    <div>Evolves From:
-                                        <p>${final.evolvesFrom}</p>
+    pokemonContainer.innerHTML = `  <img class="pokemon-image" src="${final.images.small}">
+                                    <h2 class="pokeName">${final.name}</h2>
+                                    <div class="cardDetails">
+                                        <div class="cardStyle">
+                                            <h4 class="cardHeading">Evolves From</h4>
+                                            <p>${final.evolvesFrom}</p>
+                                        </div>
+                                        <div class="cardStyle">
+                                            <h4 class="cardHeading">Rarity</h4>
+                                            <p>${final.rarity}</p>
+                                        </div>
+                                        <div class="cardStyle">
+                                            <h4 class="cardHeading">Weaknesses</h4>
+                                            <p>Type: ${final.weaknesses[0].type}</p>
+                                            <p>Value: ${final.weaknesses[0].value}</p>
+                                        </div>
                                     </div>
-                                    <div>Rarity:
-                                        <p>${final.rarity}</p>
-                                    </div>
-                                    <div>Weaknesses:
-                                        <p>${final.weaknesses[0].value}</p>
-                                        <p>${final.weaknesses[0].type}</p>
-                                    </div>
-                                </div>
                                 `;
 
                                     

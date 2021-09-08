@@ -1,7 +1,7 @@
 
 
 
-body {
+body, h4 {
     font-family: 'Open Sans', sans-serif;
     margin: 0px;
     
@@ -14,7 +14,7 @@ body {
 } */
 
 
-h3, nav {
+h2, h3, nav {
     font-family: 'Audiowide', cursive;
 }
 
@@ -23,27 +23,27 @@ h3, nav {
 
 li {
     display: inline;
-    
 }
 
 .logo {
     width: 50px;
 }
 
-a, a:hover, a:focus, a:active {
+.links {
+    border-bottom: 2px solid white;
+    margin: 20px;
     text-decoration: none;
     color: inherit;
 }
 
-.links {
-    color:  rgb(250, 227, 17);
-    border-bottom: 2px solid white;
-    margin: 20px;
+nav {
+    color: white;
 }
 
-.links:hover {
+.links:hover, #active {
     border-bottom: 2px solid rgb(250, 227, 17);
     color: rgb(250, 227, 17);
+    
 }
 
 header {
@@ -53,6 +53,7 @@ header {
     background: rgb(60, 90, 166);
 }
 
+/*Home page layout*/
 
 .result {
     margin: 1rem;
@@ -62,6 +63,8 @@ header {
     border-radius: 1rem;
     flex: none;
     box-shadow: 3px 3px 3px rgba(192, 206, 202, 0.3);
+    text-decoration: none;
+    color: black;
 }
 
 
@@ -99,7 +102,28 @@ header {
 .cardDetails {
     display: flex;
     align-items:flex-start;
-    gap: 100px;
+    gap: 2rem;
+    justify-content: center;
+    padding: 40px;
+}
+
+/*Details page*/
+
+.cardStyle {
+    flex: 1;
+    padding: 30px;
+    border-radius: 1rem;
+    background: whitesmoke;
+    height: 200px;
+}
+
+.pokeName {
+    text-align: center;
+}
+
+.cardHeading {
+    font-size: 1.2rem;
+    
 }
 
 /*Loader*/
