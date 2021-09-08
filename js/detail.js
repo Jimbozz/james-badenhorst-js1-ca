@@ -40,8 +40,9 @@ function createHtml(final) {
                                     <h2 class="pokeName">${final.name}</h2>
                                     <div class="cardDetails">
                                         <div class="cardStyle">
-                                            <h4 class="cardHeading">Evolves From</h4>
-                                            <p>${final.evolvesFrom}</p>
+                                            <h4 class="cardHeading">Attacks</h4>
+                                            <p>${final.attacks[0].name}</p>
+                                            <p>${final.attacks[1].name}</p>
                                         </div>
                                         <div class="cardStyle">
                                             <h4 class="cardHeading">Rarity</h4>
