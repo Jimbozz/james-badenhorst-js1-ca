@@ -1,5 +1,6 @@
 
 const pokemonContainer = document.querySelector(".pokemon-details");
+const errorContainer = document.querySelector(".errorContainer");
 const title = document.querySelector("title");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -19,9 +20,9 @@ async function pokemonInfo() {
         
         pokemonContainer.innerHTML = "";
 
-        for(let i = 0; i < final.weaknesses.length; i++) {
-            title.innerHTML = `${final.name}`;
+        title.innerHTML = `${final.name}`;
 
+        for(let i = 0; i < final.weaknesses.length; i++) {
            
             createHtml(final);
         }
@@ -31,11 +32,14 @@ async function pokemonInfo() {
     catch(error) {
         console.log(error);
         pokemonContainer.innerHTML = "";
-        errorContainer.innerHTML = displayError("Bad things have happened");
+        errorContainer.innerHTML = displayError("An unexpected error occured." + " " + error);
     }
 }
 
 pokemonInfo();
+
+
+
 
 function createHtml(final) {
 

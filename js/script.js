@@ -1,6 +1,5 @@
 const url = "https://api.pokemontcg.io/v2/cards/";
 
-
 const loader = document.querySelector(".loader");
 const errorContainer = document.querySelector(".errorContainer");
 const detailsContainer = document.querySelector(".details");
@@ -41,7 +40,7 @@ async function callApi() {
     catch(error) {
         console.log(error);
         detailsContainer.innerHTML = "";
-        errorContainer.innerHTML = displayError("Bad things have happened");
+        errorContainer.innerHTML = displayError("An unexpected error occured." + " " + error);
     }
    
 }
