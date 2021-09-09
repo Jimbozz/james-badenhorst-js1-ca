@@ -13,6 +13,9 @@ body, h4 {
     background-size: 100vh;
 } */
 
+main {
+    margin: 1rem 2rem;
+}
 
 h2, h3, nav {
     font-family: 'Audiowide', cursive;
@@ -104,7 +107,6 @@ header {
     align-items:flex-start;
     gap: 2rem;
     justify-content: center;
-    padding: 40px;
 }
 
 /*Details page*/
@@ -124,6 +126,21 @@ header {
 .cardHeading {
     font-size: 1.2rem;
     
+}
+
+.backButton {
+    display: flex;
+    align-items: center;
+    color: rgb(60, 90, 166);
+    text-decoration: none;
+    max-width: fit-content;
+}
+
+
+
+.fas {
+    color: rgb(60, 90, 166);
+    padding-right: 10px;
 }
 
 /*Loader*/
@@ -195,6 +212,11 @@ header {
     color: darkred;
     padding: 1rem;
     background: rgba(225, 0, 0, 0.1);
+}
+
+.errorContainer {
+    padding: 2rem;
+    text-align: center;
 }
 
 /*form*/

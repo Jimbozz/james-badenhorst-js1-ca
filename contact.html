@@ -5,18 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Contact</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Open+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css" />
         <link rel="icon" href="data:;base64,=" />
     </head>
     <body>
         <header>
+            <img src="/pokemon-1536849_640.png" class="logo" alt="">
             <nav>
                 <ul>
                     <li>
-                        <a href="/index.html" class="active">HOME</a>
+                        <a class="links" href="/index.html">HOME</a>
                     </li>
                     <li>
-                        <a href="/contact.html">CONTACT</a>
+                        <a class="links" href="/contact.html" id="active">CONTACT</a>
                     </li>
                 </ul>
             </nav>
@@ -39,7 +43,7 @@
                 </div>
                 <div>
                     <label>
-                        subject (required)
+                        Subject (required)
                         <input name="subject" id="subject" placeholder="Subject">
                     </label>
                     <div class="formError" id="subjectError">Must have a minimum length of 10 characters</div>
@@ -63,6 +67,5 @@
         </main>
         <script src="js/contact.js"></script>
         <script src="js/components/errorMessage.js"></script>
-        <script src="js/script.js"></script>
     </body>
 </html>

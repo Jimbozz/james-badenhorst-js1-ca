@@ -6,6 +6,7 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
+
 const detailsUrl = "https://api.pokemontcg.io/v2/cards/" + id;
 
 console.log(detailsUrl);
@@ -17,11 +18,12 @@ async function pokemonInfo() {
         const result = await response.json();
         const pokemonDetails = result.data;
         const final = pokemonDetails
-        
         pokemonContainer.innerHTML = "";
 
         title.innerHTML = `${final.name}`;
+        console.log(final.attacks);
 
+       
         for(let i = 0; i < final.weaknesses.length; i++) {
            
             createHtml(final);
@@ -38,6 +40,17 @@ async function pokemonInfo() {
 
 pokemonInfo();
 
+
+function createAttacks() {
+
+    for(let i = 0; i < final.attacks.length; i++) {
+        
+        if(!final[i].attacks[1]) {
+            continue;
+        }
+    
+    }
+}
 
 
 
