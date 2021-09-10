@@ -26,39 +26,40 @@
             </nav>
         </header>
         <main>
-            <form method="POST" onsubmit="formSuccess()" id="contactForm">
+            <div id="message"></div>
+            <form id="contactForm">
                 <div>
                     <label>
                         First Name (required)
-                        <input name="firstName" id="firstName" placeholder="First Name">
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
                     </label>
                     <div class="formError" id="firstNameError">Please enter your first name</div>
                 </div>
                 <div>
                     <label>
                         Last Name (required)
-                        <input name="lastName" id="lastName" placeholder="Last Name">
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name">
                     </label>
                     <div class="formError" id="lastNameError">Please enter your last name</div>
                 </div>
                 <div>
                     <label>
                         Subject (required)
-                        <input name="subject" id="subject" placeholder="Subject">
+                        <input type="text" name="subject" id="subject" placeholder="Subject">
                     </label>
                     <div class="formError" id="subjectError">Must have a minimum length of 10 characters</div>
                 </div>
                 <div>
                     <label>
                         Email (required)
-                        <input name="email" id="email" placeholder="Email">
+                        <input type="email" name="email" id="email" placeholder="Email">
                     </label>
                     <div class="formError" id="emailError">Please enter a valid email address</div>
                 </div>
                 <div>
                     <label>
                         Address
-                        <input name="address" id="address" placeholder="Address">
+                        <input type="text" name="address" id="address" placeholder="Address">
                     </label>
                     <div class="formError" id="addressError">Must have a minimum length of 25 characters</div>
                 </div>

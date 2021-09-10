@@ -245,6 +245,10 @@ button {
     border-radius: 0.2rem;
 }
 
+button:disabled {
+    background: lightgray;
+}
+
 label {
     display: block;
     margin-top: 1rem;
@@ -255,6 +259,14 @@ label {
     color: red;
     font-size: 0.9rem;
     margin-top: 2px;
+}
+
+.success-message {
+    color: green;
+    text-align: center;
+    border: 1px solid darkgreen;
+    padding: 1rem;
+    background: rgba(12, 92, 39, 0.1);
 }
 
 

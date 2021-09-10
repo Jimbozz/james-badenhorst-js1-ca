@@ -1,5 +1,7 @@
 
 const pokemonContainer = document.querySelector(".pokemon-details");
+const pokemonHeader = document.querySelector(".pokemon-header");
+const attacksContainer = document.querySelector(".attacksContainer");
 const errorContainer = document.querySelector(".errorContainer");
 const title = document.querySelector("title");
 const queryString = document.location.search;
@@ -23,11 +25,8 @@ async function pokemonInfo() {
         title.innerHTML = `${final.name}`;
         console.log(final.attacks);
 
+        createHtml(final);
        
-        for(let i = 0; i < final.weaknesses.length; i++) {
-           
-            createHtml(final);
-        }
         
     } 
     
@@ -41,42 +40,55 @@ async function pokemonInfo() {
 pokemonInfo();
 
 
+
 function createAttacks() {
 
-    for(let i = 0; i < final.attacks.length; i++) {
-        
-        if(!final[i].attacks[1]) {
-            continue;
-        }
-    
+    for (let i = 0; i < final.attacks.length; i++) {
+      if (!final[i].attacks[1]) {
+        continue;
+      }
     }
+}
+
+
+function getAttacks(attacks) {
+
+    let output = `<div class="cardStyle">
+                  <h4 class="cardHeading">Attacks</h4>`;
+    for (let i = 0; i < attacks.length; i++) {
+      output += `<p>${attacks[i].name}</p>`;
+    }
+    output += `</div>`;
+    return output;
 }
 
 
 
 function createHtml(final) {
 
-    pokemonContainer.innerHTML = `  <img class="pokemon-image" src="${final.images.small}">
-                                    <h2 class="pokeName">${final.name}</h2>
-                                    <div class="cardDetails">
-                                        <div class="cardStyle">
-                                            <h4 class="cardHeading">Attacks</h4>
-                                            <p>${final.attacks[0].name}</p>
-                                            <p>${final.attacks[1].name}</p>
-                                        </div>
-                                        <div class="cardStyle">
-                                            <h4 class="cardHeading">Rarity</h4>
-                                            <p>${final.rarity}</p>
-                                        </div>
-                                        <div class="cardStyle">
-                                            <h4 class="cardHeading">Weaknesses</h4>
-                                            <p>Type: ${final.weaknesses[0].type}</p>
-                                            <p>Value: ${final.weaknesses[0].value}</p>
-                                        </div>
-                                    </div>
-                                `;
 
-                                    
+    pokemonContainer.innerHTML = `
+                                <img class="pokemon-image" src="${final.images.small}">
+                                <h2 class="pokeName">${final.name}</h2>
+                                <div class="cardDetails">
+                                `;
+                            
+                                pokemonContainer.innerHTML += getAttacks(final.attacks);
+                                
+                            
+                                pokemonContainer.innerHTML += `
+                                                                </div>
+                                                                <div class="cardStyle">
+                                                                    <h4 class="cardHeading">Rarity</h4>
+                                                                    <p>${final.rarity}</p>
+                                                                </div>
+                                                                <div class="cardStyle">
+                                                                    <h4 class="cardHeading">Weaknesses</h4>
+                                                                    <p>Type: ${final.weaknesses[0].type}</p>
+                                                                    <p>Value: ${final.weaknesses[0].value}</p>
+                                                                </div>
+                                                                </div>
+                                                                `;
 }
 
 
