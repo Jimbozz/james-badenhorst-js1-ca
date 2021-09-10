@@ -1,5 +1,4 @@
 const url = "https://api.pokemontcg.io/v2/cards/";
-
 const loader = document.querySelector(".loader");
 const errorContainer = document.querySelector(".errorContainer");
 const detailsContainer = document.querySelector(".details");
@@ -26,7 +25,6 @@ async function callApi() {
                 continue;
             }
 
-            
             detailsContainer.innerHTML += `<a class="result"  href="/details.html?id=${final[i].id}">
                                             <img class="details-image" src="${final[i].images.small}" alt="${final[i].name}">
                                             <h3>${final[i].name}</h3>

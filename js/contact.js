@@ -4,7 +4,6 @@ const lastNameError = document.querySelector("#lastNameError");
 const subjectError = document.querySelector("#subjectError");
 const emailError = document.querySelector("#emailError");
 const addressError = document.querySelector("#addressError");
-const message = document.querySelector("#message");
 const button = document.querySelector("button");
 
 function formValidation(event) {
@@ -80,31 +79,3 @@ function validateEmail(email) {
     return matches;
 }
 
-// Disabled button
-
-
-// function acceptForm() {
-//     // if all inputs pass validation enable the button
-    // if (checkLength(firstName.value, 0) && checkLength(lastName.value, 0) && checkLength(subject.value, 9) && validateEmail(email.value) && checkLength(address.value, 24)) {
-    //     return true;
-    // } else {
-    //     // clear the message
-    //     return false;
-    //     // disable button
-        
-    // }
-// }
-
-
-
-
-//Form success
-
-
-// form.onsubmit = function formSuccess() {
-    
-//     form.innerHTML = `<div class="success-message">Your form was successfully submitted</div>`
-    
-// }
-
-//Information not getting passed to the browser!!!!!!
