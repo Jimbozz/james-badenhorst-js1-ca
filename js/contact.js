@@ -4,7 +4,7 @@ const lastNameError = document.querySelector("#lastNameError");
 const subjectError = document.querySelector("#subjectError");
 const emailError = document.querySelector("#emailError");
 const addressError = document.querySelector("#addressError");
-const button = document.querySelector("button");
+
 
 function formValidation(event) {
 
@@ -50,9 +50,8 @@ function formValidation(event) {
 
         form.onsubmit = function formSuccess() {
     
-                form.innerHTML = `<div class="success-message">Your form was successfully submitted.</div>`
-                
-            }
+            form.innerHTML = `<div class="success-message">Your form was successfully submitted.</div>`
+        }
     }
     else {
         return false;
@@ -65,6 +64,7 @@ form.addEventListener("submit", formValidation);
 ////////////// Validation Functions
 
 function checkLength(value, length) {
+
     if(value.trim().length >= length) {
         return true;
     }
@@ -74,6 +74,7 @@ function checkLength(value, length) {
 }
 
 function validateEmail(email) {
+    
     const regEx = /\S+@\S+\.\S+/;
     const matches = regEx.test(email);
     return matches;

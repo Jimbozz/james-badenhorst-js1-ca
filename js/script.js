@@ -26,10 +26,10 @@ async function callApi() {
             }
 
             detailsContainer.innerHTML += `<a class="result"  href="/details.html?id=${final[i].id}">
-                                            <img class="details-image" src="${final[i].images.small}" alt="${final[i].name}">
+                                            <img src="${final[i].images.small}" alt="${final[i].name}">
                                             <h3>${final[i].name}</h3>
-                                            <p><strong>HP:</strong> ${final[i].hp}</p>
-                                            <p><strong>Type:</strong> ${final[i].types}</p>
+                                            <p><b>HP:</b> ${final[i].hp}</p>
+                                            <p><b>Type:</b> ${final[i].types}</p>
                                         </a>`;
 
         }
